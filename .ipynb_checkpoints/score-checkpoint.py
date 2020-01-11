@@ -1,12 +1,19 @@
 import pickle
+import string
 word_scores = pickle.load(open("./Resources/pickled_scores.p", "rb"))
 
-def score(tweet):
-    words = [word for word in tweet.split(" ") if word.isalpha()]
-    tweetscore = 0
+
+
+def score(text):
+    words = [word.translate(str.maketrans('', '', string.punctuation)).lower() for word in text.split(" ")]
+    text_score = 0
     for word in words:
         try:
-            tweetscore += word_scores[word][2]
+            text_score += word_scores[word][2]
         except:
             continue
-    return tweetscore
+    return text_score
+
+def normal_score(text):
+    words = [word.translate(str.maketrans('', '', string.punctuation)).lower() for word in text.split(" ")]
+    return score(text)/len(words)
