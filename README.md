@@ -17,4 +17,4 @@ We are pulling reviews data from the MovieDB API (both ratings and associated te
 2. NLTK filtered MovieDB responses.
 3. Box office revenues of movies.
 ## Rough Breakdown of Tasks:
-![Trello](Trello.png)
+![Trello](./Resources/Trello.png)
