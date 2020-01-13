@@ -3,3 +3,4 @@ api_keys.py
 .ipynb_checkpoints/get_tweets-checkpoint.ipynb
 __pycache__/
 .~lock.MCU_Film_Data.csv#
+.ipynb_checkpoints/*
